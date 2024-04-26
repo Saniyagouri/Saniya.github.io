@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificates.</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .certificate {
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .certificate:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .certificate img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .dropdown {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .dropdown select {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown select:hover {
+            background-color: #f5f5f5;
+        }
+
+        .dropdown select:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            border: 1px solid #333;
+        }
+
+        .none {
+            font-size: 0.9em;
+        }
+
+        .none1 {
+            font-size: 16px;
+        }
+        
+        .none2 {
+            font-size: 16px;
+        }
+
+        .none3{
+            font-size: 10px;
+            align-items: center;
+
+        }
+
+        .none4{
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate Showcase</h1>
+    <div class="container">
+        <div class="dropdown">
+            <label for="certificate-select">Select Certificate:</label>
+            <select id="certificate-select">
+                <option value="">Select a certificate...</option>
+                <option value="certificate1">Google cloud computing foundation Program</option>
+                <option value="certificate2">Power BI</option>
+                <option value="certificate3">Advanced software engineering job simulation</option>
+                <option value="certificate4">CloudThat</option>
+                <option value="certificate5">Cyclave</option>
+                
+            </select>
+        </div>
+        <div class="certificates">
+            <div class="certificate" id="certificate1">
+                <img src="C:\Users\saniy\OneDrive\Desktop\Saniya_Projects\Saniya.github.io\pdf2png\20MEI10070\20MEI10070-1.png" alt="Certificate 1">
+                <h3>Google cloud computing foundation</h3>
+            </div>
+            <div class="certificate" id="certificate2">
+                <img src="C:\Users\saniy\OneDrive\Desktop\Saniya_Projects\Saniya.github.io\pdf2png\BI certificate\BI certificate-1.png" alt="Certificate 2">
+                <h3>Power BI </h3>
+            </div>
+            <div class="certificate" id="certificate3">
+                <img src="C:\Users\saniy\OneDrive\Desktop\Saniya_Projects\Saniya.github.io\pdf2png\Walmart certificate\oX6f9BbCL9kJDJzfg_Walmart certificate-1.png" alt="Certificate 3">
+                <h3>Software engineering job simulation</h3>
+            </div>
+            <div class="certificate" id="certificate4">
+                <img src="C:\Users\saniy\OneDrive\Desktop\Saniya_Projects\Saniya.github.io\pdf2png\certificate cloudthat -Saniya-Gouri\certificate cloudthat -Saniya-Gouri-1.png" alt="Certificate 4">
+                <h3>CloudThat</h3>
+            </div>
+            <div class="certificate" id="certificate5">
+                <img src="C:\Users\saniy\OneDrive\Desktop\Saniya_Projects\Saniya.github.io\pdf2png\CyClave Certificate (1)\CyClave Certificate (1)-1.png" alt="Certificate 5">
+                <h3>Cyclave</h3>
+            </div>            <!-- Add more certificate divs for additional certificates -->
+        </div>
+    </div>
+
+    <script>
+        var select = document.getElementById("certificate-select");
+        var certificates = document.querySelectorAll(".certificate");
+        select.addEventListener("change", function() {
+            for (var i = 0; i < certificates.length; i++) {
+                certificates[i].style.display = "none";
+            }
+            var selectedCertificate = document.getElementById(select.value);
+            selectedCertificate.style.display = "block";
+        });
+    </script>
+</body>
+</html>
