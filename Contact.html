@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./contact_files/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff; /* White background color */
+            color: #333; /* Text color */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff; /* White background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #333; /* Dark border color */
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            border: 1px solid #000; /* Black border for the textarea */
+        }
+
+        button {
+            background-color: #007bff; /* Blue button color */
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://formspree.io/f/myyrlqvk" method="POST">
+            <h2>Contact Me 😃</h2>
+            <input type="text" id="name" placeholder="Your Name" name="Your name" required>
+            <input type="email" id="email" placeholder="Your Email" name="Your email" required>
+            <input type="tel" id="phone" placeholder="Your Mobile Number" name="Your mobile number" required>
+            <textarea id="message" rows="4" placeholder="Message" name="Message from user" required></textarea>
+            <button type="submit">Send!</button>
+        </form>
+
+        
+    </div>
+</body>
+
+</html>
